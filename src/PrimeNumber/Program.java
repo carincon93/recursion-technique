@@ -10,22 +10,22 @@ public class Program {
         System.out.println(message);
     }
 
-    public static String primeNumber(int a, int b, int c) {
-        if (a == 0 || a == 1) {
-            return a+" es un número especial que no se considera primo ni compuesto";
+    public static String primeNumber(int number, int multiplicand, int multiplier) {
+        if (number == 0 || number == 1) {
+            return number+" es un número especial que no se considera primo ni compuesto";
         }
 
-        if (b == a) {
+        if (multiplicand == number) {
             return "Si";
-        } else if(b * c == a) {
+        } else if(multiplicand * multiplier == number) {
             return "No";
         }
 
-        if(b * c > a) {
-            c = 1;
-            b++;
+        if(multiplicand * multiplier > number) {
+            multiplier = 1;
+            multiplicand++;
         }
 
-        return primeNumber(a, b, c+1);
+        return primeNumber(number, multiplicand, multiplier+1);
     }
 }
