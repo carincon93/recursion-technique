@@ -1,1 +1,1 @@
-# recursion-tecnique
+# recursion-technique
